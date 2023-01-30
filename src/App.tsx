@@ -1,9 +1,9 @@
-import React from "react";
+import React, { ComponentProps } from "react";
 import TimeEntryView from "./components/TimeEntryView";
-import TimeEntry from "./domain/TimeEntry";
 
 export function App() {
-  const timeEntry: TimeEntry = {
+  // ComponentProps<typeof TimeEntryView>["timeEntry"] is the same as TimeEntry
+  const timeEntry: ComponentProps<typeof TimeEntryView>["timeEntry"] = {
     id: "oijdsjiodsajdp9i0321",
     comment: "React gelernt",
     start: new Date(),
