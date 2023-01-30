@@ -1,9 +1,16 @@
+import TimeEntry from "../domain/TimeEntry";
+
 interface Props {
-  comment: string;
+  timeEntry: TimeEntry;
 }
 
 function TimeEntryView(props: Props) {
-  return <div>{props.comment}</div>;
+  return (
+    <div>
+      <h3>{props.timeEntry.comment}</h3>
+      <pre>{props.timeEntry.start.toLocaleString()}</pre>
+    </div>
+  );
 }
 
 export default TimeEntryView;
