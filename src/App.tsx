@@ -36,7 +36,7 @@ export function App() {
   ]);
 
   function handleNewTimeEntry(newTimeEntry: TimeEntry) {
-    setTimeEntries([...timeEntries, newTimeEntry]);
+    setTimeEntries((prevTimeEntries) => [...prevTimeEntries, newTimeEntry]);
   }
 
   return (
