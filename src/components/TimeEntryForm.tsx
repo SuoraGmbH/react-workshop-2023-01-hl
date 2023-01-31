@@ -1,9 +1,21 @@
 import React, { useState } from "react";
+import TimeEntry from "../domain/TimeEntry";
 
-const TimeEntryForm: React.FunctionComponent = () => {
+interface Props {
+  onNewTimeEntry: (timeEntry: TimeEntry) => void;
+}
+
+const TimeEntryForm: React.FunctionComponent<Props> = ({ onNewTimeEntry }) => {
   const [inputValue, setInputValue] = useState("");
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    onNewTimeEntry({
+      id: crypto.randomUUID(),
+      end: new Date(),
+      start: new Date(),
+      comment: inputValue,
+    });
+
     event.preventDefault();
     console.log("Hallo Welt!");
   }
