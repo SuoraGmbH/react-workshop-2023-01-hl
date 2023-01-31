@@ -8,7 +8,10 @@ function TimeEntryView(props: Props) {
   return (
     <div>
       <h3>{props.timeEntry.comment}</h3>
-      <pre>{props.timeEntry.start.toLocaleString()}</pre>
+      <pre>
+        {props.timeEntry.start.toLocaleString()} -{" "}
+        {props.timeEntry.end.toLocaleString()}
+      </pre>
     </div>
   );
 }
