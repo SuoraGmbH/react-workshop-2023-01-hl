@@ -54,3 +54,7 @@ describe("<TimeEntryForm />", () => {
     );
   });
 });
+
+// Ideen für weitere Tests: (Funktionalität muss noch gebaut werden!)
+// - Ist der Button deaktiviert, wenn das formular leer ist?
+// - Wird das Formular geleert, wenn ich es absende
