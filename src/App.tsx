@@ -14,26 +14,7 @@ export function App() {
     end: new Date(),
   };
 
-  const [timeEntries, setTimeEntries] = useState([
-    {
-      id: "u0e12u90du90adsu90",
-      comment: "React Basics lernen",
-      start: new Date(),
-      end: new Date(),
-    },
-    {
-      id: "jijof9230i9i90di9ads",
-      comment: "React testing lernen",
-      start: new Date(),
-      end: new Date(),
-    },
-    {
-      id: " ijdsa9jjdas",
-      comment: "Redux lernen",
-      start: new Date(),
-      end: new Date(),
-    },
-  ]);
+  const [timeEntries, setTimeEntries] = useState<TimeEntry[]>([]);
 
   function handleNewTimeEntry(newTimeEntry: TimeEntry) {
     setTimeEntries((prevTimeEntries) => [...prevTimeEntries, newTimeEntry]);
