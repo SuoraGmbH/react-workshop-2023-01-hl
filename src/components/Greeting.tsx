@@ -5,7 +5,7 @@ interface Props {
 }
 
 const Greeting: React.FunctionComponent<Props> = ({ city }) => {
-  return <div>Hallo {city}!</div>;
+  return <div>Hallo {city.toUpperCase()}!</div>;
 };
 
 export default Greeting;

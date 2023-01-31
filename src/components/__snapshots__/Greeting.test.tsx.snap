@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`It renders according to snapshot 1`] = `
+<div>
+  <div>
+    Hallo 
+    LLANFAIRPWLLGWYNGYLLGOGERYCHWYRNDROBWLLLLANTYSILIOGOGOGOCH
+    !
+  </div>
+</div>
+`;
