@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { ThemedBox } from "./Theme";
 
 const Counter: React.FunctionComponent = () => {
   const [count, setCount] = useState(0);
@@ -13,7 +12,6 @@ const Counter: React.FunctionComponent = () => {
 
   return (
     <div>
-      <ThemedBox />
       <p>Current count: {count}</p>
       <button
         onClick={() => {
