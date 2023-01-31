@@ -10,14 +10,13 @@ const TimeEntryForm: React.FunctionComponent<Props> = ({ onNewTimeEntry }) => {
 
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     onNewTimeEntry({
-      id: crypto.randomUUID(),
+      id: new Date().toISOString(),
       end: new Date(),
       start: new Date(),
       comment: inputValue,
     });
 
     event.preventDefault();
-    console.log("Hallo Welt!");
   }
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
