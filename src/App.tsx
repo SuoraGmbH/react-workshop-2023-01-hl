@@ -37,7 +37,8 @@ export function App() {
       <TimeEntryListWithRedux />
       <hr />
       {/*<GithubRepoStats />*/}
-      <GithubRepoFromApi />
+      <GithubRepoFromApi repoName="facebook/react" />
+      <GithubRepoFromApi repoName="angular/angular" />
       <hr />
       <ChristiansDreckigerReduxDebugger />
       <Counter />
