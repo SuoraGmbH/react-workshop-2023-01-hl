@@ -13,6 +13,7 @@ import ChristiansDreckigerReduxDebugger from "./components/ChristiansDreckigerRe
 import GithubRepoStats from "./components/GithubRepoStats";
 import GithubRepoFromApi from "./components/GithubRepoFromApi";
 import TimeEntryListFromApi from "./components/TimeEntryListFromApi";
+import TimeEntryListWithHOC from "./components/TimeEntryListWithHOC";
 
 const store = configureStore();
 
@@ -33,6 +34,7 @@ export function App() {
 
   return (
     <Provider store={store}>
+      <TimeEntryListWithHOC />
       <NavBar />
       <TimeEntryFormWithRedux />
       <TimeEntryListWithRedux />
