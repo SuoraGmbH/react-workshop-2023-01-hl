@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 
 const Counter: React.FunctionComponent = () => {
   const [count, setCount] = useState(0);
