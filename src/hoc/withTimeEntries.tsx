@@ -4,15 +4,19 @@ import TimeEntry from "../domain/TimeEntry";
 interface Props {
   timeEntries: TimeEntry[];
 }
-const withTimeEntries = (Component: React.ComponentType<Props>) => {
-  const WithTimeEntries: React.FunctionComponent = () => {
+const withTimeEntries = function <T extends Props>(
+  Component: React.ComponentType<T>
+) {
+  const WithTimeEntries: React.FunctionComponent<Omit<T, "timeEntries">> = (
+    props
+  ) => {
     const timeEntries = useTimeEntriesFromServer();
 
     if (!timeEntries) {
       return null;
     }
 
-    return <Component timeEntries={timeEntries} />;
+    return <Component {...(props as T)} timeEntries={timeEntries} />;
   };
 
   return WithTimeEntries;
