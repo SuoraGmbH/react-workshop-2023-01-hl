@@ -10,6 +10,8 @@ import TimeEntryFormWithRedux from "./components/TimeEntryFormWithRedux";
 import TimeEntryListWithRedux from "./components/TimeEntryListWithRedux";
 import NavBar from "./components/NavBar";
 import ChristiansDreckigerReduxDebugger from "./components/ChristiansDreckigerReduxDebugger";
+import GithubRepoStats from "./components/GithubRepoStats";
+import GithubRepoFromApi from "./components/GithubRepoFromApi";
 
 const store = configureStore();
 
@@ -33,6 +35,9 @@ export function App() {
       <NavBar />
       <TimeEntryFormWithRedux />
       <TimeEntryListWithRedux />
+      <hr />
+      {/*<GithubRepoStats />*/}
+      <GithubRepoFromApi />
       <hr />
       <ChristiansDreckigerReduxDebugger />
       <Counter />
