@@ -12,6 +12,7 @@ import NavBar from "./components/NavBar";
 import ChristiansDreckigerReduxDebugger from "./components/ChristiansDreckigerReduxDebugger";
 import GithubRepoStats from "./components/GithubRepoStats";
 import GithubRepoFromApi from "./components/GithubRepoFromApi";
+import TimeEntryListFromApi from "./components/TimeEntryListFromApi";
 
 const store = configureStore();
 
@@ -35,6 +36,7 @@ export function App() {
       <NavBar />
       <TimeEntryFormWithRedux />
       <TimeEntryListWithRedux />
+      <TimeEntryListFromApi />
       <hr />
       {/*<GithubRepoStats />*/}
       <GithubRepoFromApi repoName="facebook/react" />
