@@ -25,6 +25,7 @@ describe("timeEntriesReducer", () => {
     expect(state.timeEntries[0]).toEqual({
       id: "oijdsjiodsajdp9i0321",
       comment: "React gelernt",
+      // Das wird definitiv immer wieder failen, weil es ein anderes Date ist als oben
       start: new Date(),
       end: new Date(),
     });
