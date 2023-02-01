@@ -6,6 +6,10 @@ import TimeEntryList from "./components/TimeEntryList";
 import TimeEntry from "./domain/TimeEntry";
 import { configureStore } from "./redux/configureStore";
 import { Provider } from "react-redux";
+import TimeEntryFormWithRedux from "./components/TimeEntryFormWithRedux";
+import TimeEntryListWithRedux from "./components/TimeEntryListWithRedux";
+import NavBar from "./components/NavBar";
+import ChristiansDreckigerReduxDebugger from "./components/ChristiansDreckigerReduxDebugger";
 
 const store = configureStore();
 
@@ -26,6 +30,11 @@ export function App() {
 
   return (
     <Provider store={store}>
+      <NavBar />
+      <TimeEntryFormWithRedux />
+      <TimeEntryListWithRedux />
+      <hr />
+      <ChristiansDreckigerReduxDebugger />
       <Counter />
       <h1>Hallo Hamburg!</h1>
       <h2>Hallo, mein Name ist Sarah!</h2>
@@ -33,6 +42,7 @@ export function App() {
 
       <TimeEntryForm onNewTimeEntry={handleNewTimeEntry} />
       <TimeEntryList timeEntries={timeEntries} />
+      <TimeEntryListWithRedux />
     </Provider>
   );
 }

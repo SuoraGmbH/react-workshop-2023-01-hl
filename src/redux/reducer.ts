@@ -1,7 +1,10 @@
-const initialState = {};
+import { combineReducers } from "redux";
+import timeEntriesReducer from "./timeEntries/timeEntriesReducer";
 
-type AppAction = unknown;
+// const initialState = {};
+//
+// type AppAction = unknown;
 
-export const appReducer = (state = initialState, action: AppAction) => {
-  return state;
-};
+export const appReducer = combineReducers({
+  timeEntries: timeEntriesReducer,
+});
